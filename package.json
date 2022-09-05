@@ -2,23 +2,21 @@
   "name": "vue-argon-dashboard-2",
   "version": "3.0.0",
   "private": true,
-  "author": "Creative Tim",
-  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
-  "description": "VueJS version of Argon Dashboard 2 by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/vue-argon-dashboard/",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/vue-argon-dashboard/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/vue-argon-dashboard.git"
-  },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 8201",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "postinstall": "npx typesync"
   },
   "dependencies": {
+    "@types/moment": "^2.13.0",
+    "@types/nprogress": "^0.2.0",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "nprogress": "^0.2.0",
+    "slick-carousel": "^1.8.1",
+    "toastr": "^2.1.4",
+    "viewerjs": "^1.10.1",
     "@popperjs/core": "2.10.2",
     "bootstrap": "5.1.3",
     "chart.js": "3.6.0",
@@ -31,18 +29,59 @@
     "vuex": "4.0.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.5.0",
-    "@vue/cli-plugin-eslint": "4.5.0",
+    "@types/bootstrap": "5.2.0",
+    "@types/core-js": "2.5.5",
+    "@types/dropzone": "5.7.4",
+    "@types/eslint": "^6.8.1",
+    "@types/eslint-plugin-prettier": "3.1.0",
+    "@types/jquery": "^3.5.5",
+    "@types/nprogress": "^0.2.0",
+    "@types/prettier": "2.2.1",
+    "@types/quill": "1.3.6",
+    "@types/sass": "1.43.1",
+    "@types/slick-carousel": "^1.6.37",
+    "@types/toastr": "^2.1.40",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "4.5.0",
-    "@vue/cli-service": "4.5.0",
-    "@vue/compiler-sfc": "3.2.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-prettier": "6.0.0",
-    "babel-eslint": "10.1.0",
-    "eslint": "6.7.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
     "eslint-plugin-prettier": "3.3.1",
-    "eslint-plugin-vue": "7.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "fork-ts-checker-webpack-plugin": "^6.3.4",
     "prettier": "2.2.1",
     "sass": "1.43.3",
-    "sass-loader": "10.1.1"
+    "sass-loader": "10.1.1",
+    "typescript": "~4.1.5",
+    "vue-loader-v16": "^16.0.0-beta.5.4"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "@vue/typescript"
+    ],
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+    },
+    "rules": {
+      "vue/no-unused-components": "off",
+      "no-unused-vars": "off",
+      "prefer-rest-params": "off",
+      "no-constant-condition": "off",
+      "prefer-const": "off",
+      "no-var": "off"
+    }
   }
 }

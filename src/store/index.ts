@@ -25,13 +25,13 @@ export default createStore({
     navbarMinimize(state) {
       const sidenav_show = document.querySelector(".g-sidenav-show");
 
-      if (sidenav_show.classList.contains("g-sidenav-hidden")) {
+      if (sidenav_show?.classList.contains("g-sidenav-hidden")) {
         sidenav_show.classList.remove("g-sidenav-hidden");
         sidenav_show.classList.add("g-sidenav-pinned");
         state.isPinned = true;
       } else {
-        sidenav_show.classList.add("g-sidenav-hidden");
-        sidenav_show.classList.remove("g-sidenav-pinned");
+        sidenav_show?.classList.add("g-sidenav-hidden");
+        sidenav_show?.classList.remove("g-sidenav-pinned");
         state.isPinned = false;
       }
     },
