@@ -2,7 +2,7 @@
   <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item" v-for="(route, i)   in routes" :key="i">
-        <sidenav-item :url="route.path" :class="getRoute() === route.path ? 'active' : ''"
+        <sidenav-item v-if="!route.isHideMenu" :url="route.path" :class="getRoute() === route.path ? 'active' : ''"
           :navText="route.name">
           <template v-slot:icon>
             <i :class="route.icon" class="text-primary text-sm opacity-10"></i>

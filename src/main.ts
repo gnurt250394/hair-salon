@@ -11,3 +11,4 @@ appInstance.use(store);
 appInstance.use(router);
 appInstance.use(ArgonDashboard);
 appInstance.mount("#app");
+appInstance.component('Paginate', require('./components/Paginate').default);

@@ -38,7 +38,7 @@ Coded by www.creative-tim.com
       v-if="this.$store.state.showNavbar"
     />
     <router-view />
-    <app-footer v-show="this.$store.state.showFooter" />
+    <!-- <app-footer v-show="this.$store.state.showFooter" /> -->
     <configurator
       :toggle="toggleConfigurator"
       :class="[
@@ -52,7 +52,7 @@ Coded by www.creative-tim.com
 import Sidenav from "./examples/Sidenav";
 import Configurator from "@/examples/Configurator.vue";
 import Navbar from "@/examples/Navbars/Navbar.vue";
-import AppFooter from "@/examples/Footer.vue";
+// import AppFooter from "@/examples/Footer.vue";
 import { mapMutations } from "vuex";
 
 export default {
@@ -61,7 +61,7 @@ export default {
     Sidenav,
     Configurator,
     Navbar,
-    AppFooter
+    // AppFooter
   },
   methods: {
     ...mapMutations(["toggleConfigurator", "navbarMinimize"])
