@@ -38,7 +38,6 @@
             <router-link
               :to="{ name: 'Signin' }"
               class="px-0 nav-link font-weight-bold text-white"
-              target="_blank"
             >
               <i
                 class="fa fa-user"
